@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string str,sub;
+    getline(cin,str);
+    cin>>sub;
+    int len1=str.size();
+    int slen=sub.size();
+    int cnt=0;
+
+    for(int i=0;i<=len1-slen;i++){
+        bool found=true;
+        for(int j=0;j<slen;j++){
+            if(str[i+j]!=sub[j]){
+                found=false;
+                break;
+            }
+        }
+        if(found){
+            cnt++;
+        }
+    }
+    cout<<cnt;
+return 0;
+}
